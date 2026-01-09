@@ -10,6 +10,12 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
 authors = [{ name = "Viber Team" }]
+dependencies = [
+  "azure-identity>=1.16",
+  "azure-storage-file-datalake>=12.14",
+  "pandas>=2.0",
+  "pyarrow>=15.0",
+]
 
 [project.urls]
 Homepage = "https://example.com"
