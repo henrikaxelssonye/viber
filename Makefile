@@ -1,7 +1,7 @@
 .PHONY: install lint format test dbt-debug dbt-run
 
-DBT_PROJECT_DIR := data/dbt
-DBT_PROFILES_DIR := data/dbt
+export DBT_PROJECT_DIR := $(abspath data/dbt)
+export DBT_PROFILES_DIR := $(abspath data/dbt)
 
 install:
 	pip install -e .[dev]
