@@ -1,0 +1,15 @@
+name: viber
+version: "1.0.0"
+config-version: 2
+profile: viber
+
+model-paths: ["models"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  viber:
+    +materialized: view
