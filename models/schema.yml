@@ -1,0 +1,36 @@
+version: 2
+
+seeds:
+  - name: sample_users
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+          - unique
+
+models:
+  - name: stg_users
+    description: Cleaned staging users from the sample seed.
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+          - unique
+
+  - name: user_counts
+    description: Aggregate counts of users for reporting.
+    columns:
+      - name: total_users
+        tests:
+          - not_null
+      - name: unique_emails
+        tests:
+          - not_null
